@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block page_scripts %}
+<script>
+
+function remove_modal(){
+    const e = document.getElementById("add_tag_modal")
+    e.parentElement.removeChild(e);
+
+}
+
+</script>
+
+
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">Add New Author</div>
+        <div class="card-body">
+            <form id="id_author" method="post" action=".">
+                {% include "partials/author_form.html" %}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
